@@ -30,4 +30,10 @@ public class DecorationPlacer : MonoBehaviour
         }
         decorationHolder.AddDecorations(objs);
     }
+
+    public void ShedLeaves()
+    {
+        var decorationHolder = GameObject.FindGameObjectWithTag("MoneyTree").GetComponent<DecorationHolder>();
+        decorationHolder.ShedLeaves();
+    }
 }

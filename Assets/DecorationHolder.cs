@@ -10,6 +10,7 @@ public class DecorationHolder : MonoBehaviour
 
     [SerializeField] Renderer StemRend;
     [SerializeField] Renderer LeavesRend;
+    [SerializeField] Animator Animator;
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +44,10 @@ public class DecorationHolder : MonoBehaviour
                 i++;
             }
         }
+    }
+
+    internal void ShedLeaves()
+    {
+        Animator.Play("ShedLeaves");
     }
 }
