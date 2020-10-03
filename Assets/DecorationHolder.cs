@@ -8,6 +8,9 @@ public class DecorationHolder : MonoBehaviour
     [SerializeField] List<Transform> _decorationSlotList = new List<Transform>();
     [SerializeField] List<GameObject> _decorationList = new List<GameObject>();
 
+    [SerializeField] Renderer StemRend;
+    [SerializeField] Renderer LeavesRend;
+
     // Start is called before the first frame update
     void Start()
     {
