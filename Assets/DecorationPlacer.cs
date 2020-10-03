@@ -18,8 +18,16 @@ public class DecorationPlacer : MonoBehaviour
         
     }
 
-    public void PlaceDecorations()
+    public void PlaceDecorations(int num)
     {
-
+        var decorationHolder = GameObject.FindGameObjectWithTag("MoneyTree").GetComponent<DecorationHolder>();
+        System.Random rand = new System.Random();
+        List<GameObject> objs = new List<GameObject>();
+        for (int i = 0; i < num; i++)
+        {
+            var obj = _decorationList[rand.Next(_decorationList.Count)];
+            objs.Add(obj);
+        }
+        decorationHolder.AddDecorations(objs);
     }
 }
