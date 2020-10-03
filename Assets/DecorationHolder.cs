@@ -11,6 +11,7 @@ public class DecorationHolder : MonoBehaviour
     [SerializeField] Renderer StemRend;
     [SerializeField] Renderer LeavesRend;
     [SerializeField] Animator Animator;
+    [SerializeField] AudioSource AudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -49,5 +50,6 @@ public class DecorationHolder : MonoBehaviour
     internal void ShedLeaves()
     {
         Animator.Play("ShedLeaves");
+        AudioSource.PlayDelayed(0.5f);
     }
 }
